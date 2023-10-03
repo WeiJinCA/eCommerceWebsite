@@ -27,3 +27,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# This eCommerce website focuses on electronic product shopping and aims to provide customers with high-quality products at low prices.
+## Tech Stack
+MEAN
+* Database: MongoDB
+* Backend web framework: Express.js
+* Frontend framework: Angular
+* Server-side JavaScript: Node.js
