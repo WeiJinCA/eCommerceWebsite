@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "64c3943c5462f915f5130120"
+  },
+  "id": 8,
+  "brand": "Apple",
+  "product": "iphone12",
+  "color": "Black",
+  "storage": "64GB",
+  "price": 849,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64c395d25462f915f5130122"
+  },
+  "id": 14,
+  "brand": "Apple",
+  "product": "iphone14",
+  "color": "Black",
+  "storage": "256GB",
+  "price": 1249,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64c471c4a326b1a63db344e9"
+  },
+  "id": 56,
+  "brand": "Apple",
+  "product": "iphone13",
+  "color": "Black",
+  "storage": "128GB",
+  "price": 999,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d15e03dded0d73407dea88"
+  },
+  "id": 14,
+  "brand": "Apple",
+  "product": "iphone14Pro",
+  "color": "Black",
+  "storage": "128GB",
+  "price": 1233,
+  "__v": 0
+}]

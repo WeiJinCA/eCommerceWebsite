@@ -1,0 +1,57 @@
+ .main{
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding-top: 5px;
+ }
+
+ .selected {
+     background-color: #007bff;
+     color: #fff;
+    border: 3px solid #fff;
+ }
+
+ .storage-button{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    
+ }
+
+ .circle-img {
+
+    border-radius: 50%;
+    /* Make the image circular */
+ }
+
+ .circle-button {
+    width: 40px;
+    /* Adjust the width and height to your preference */
+    height: 40px;
+    /* Should be equal for a perfect circle */
+    border-radius: 50%;
+    /* Make the border circular (half of width/height) */
+    border: 3px solid transparent;
+    /* Add a border to the circle */
+    background-color: #fff;
+    /* Optional background color */
+    color: #000;
+    /* Optional text color */
+    font-size: 16px;
+    /* Optional font size */
+    padding:2px
+ }
+  .selectedColor {
+     border: 2px solid black;
+  }
+
+  .cart:hover{
+      background-color: #007bff;
+         color: #fff;
+         border:0
+  }

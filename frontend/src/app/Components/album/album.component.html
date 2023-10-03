@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+
+    <title>Album example · Bootstrap v5.3</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/album/"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="d-flex justify-content-center mb-3">
+            <h1>Hot Deals</h1>
+          </div>
+
+          <div class="row g-3">
+            <ng-container *ngFor="let item of items.data">
+              <div class="col-md-4 pl-0 pr-0">
+                <app-item [item]="item"></app-item>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

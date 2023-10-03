@@ -1,0 +1,83 @@
+<div class="hold-transition register-page">
+<div class="register-box">
+    <div class="register-logo">
+      <img class="mb-4" src="../../../assets/img/bootstrap-logo.svg" alt="" width="72" height="57">
+    </div>
+  
+    <div class="card">
+      <div class="card-body register-card-body">
+        <p class="login-box-msg">Register as a new member</p>
+  
+        <form  #regForm='ngForm' (ngSubmit)='RegisterCustomer(regForm)'>
+          <div class="input-group mb-3">
+              
+            <input type="text" class="form-control" id="Name" name="name" [(ngModel)]="model.name" placeholder="Full name" required>
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-user"></span>
+              </div>
+            </div>
+            
+          </div>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" id="Email" name="email" [(ngModel)]="model.email" placeholder="Email" required>
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-envelope"></span>
+              </div>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="phone" id="Phone" [(ngModel)]="model.phone" placeholder="Phone Number" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');" required>
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-phone"></span>
+              </div>
+            </div>
+            <span style="color:red">{{phonealert}}</span>
+          </div>
+          
+          <div class="input-group mb-3">
+            <input type="password" id="Password" name="password" [(ngModel)]="model.password" class="form-control" placeholder="Password" required>
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <input type="password" id="ConfirmPassword" name="confirmPassword" [(ngModel)]="model.confirmPassword" class="form-control" placeholder="Retype password" required>
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
+            </div>
+            <span style="color:red">{{passwordalert}}</span>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <div class="icheck-primary">
+                <input type="checkbox" id="agreeTerms" name="terms" [(ngModel)]="model.agree" required>
+                <label for="agreeTerms">
+                  <p>&nbsp;I agree to the terms</p>
+                </label>
+              </div>
+            </div>
+            <!-- /.col -->
+            <div class="col-4">
+              <button type="submit" [disabled]=!regForm.form.valid  class="btn btn-primary btn-block">Register</button>
+            </div>
+            <!-- /.col -->
+          </div>
+        </form>
+        <!--{{model | json}}-->
+  
+        
+  
+        <a [routerLink]="['/login']" class="text-center">Sign In</a><br/>
+        <a [routerLink]="['/']" class="text-center">Back</a>
+      </div>
+      <!-- /.form-box -->
+    </div><!-- /.card -->
+  </div>
+</div>

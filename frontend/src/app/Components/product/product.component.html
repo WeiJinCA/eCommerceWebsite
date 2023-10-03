@@ -1,0 +1,197 @@
+<app-header></app-header>
+
+<!--================Single Product Area =================-->
+<main class="main">
+  <div class="product_image_area">
+    <div class="container">
+      <div class="row s_product_inner mt-5">
+        <div class="col-lg-4">
+          <img
+            class="img-fluid"
+            [src]="getImageUrl(models.data[0].product)"
+            alt=""
+          />
+          <div class="owl-carousel owl-theme s_Product_carousel">
+            <div class="single-prd-item"></div>
+            <!-- <div class="single-prd-item">
+							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
+						</div>
+						<div class="single-prd-item">
+							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
+						</div> -->
+          </div>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+          <div class="s_product_text">
+            <h3>{{ models.data[0].brand }} {{ models.data[0].product }}</h3>
+
+            <ul class="list">
+              <li><span>Brand</span> : {{ models.data[0].brand }}</li>
+              <li><span>Storage</span> : {{ selectedStorage }}</li>
+              <li>
+                <div class="btn-group">
+                  <button
+                    class="storage-button"
+                    type="button"
+                    *ngFor="let storage of storages"
+                    [class.selected]="storage === selectedStorage"
+                    (click)="onChangeSelection(storage)"
+                  >
+                    {{ storage }}
+                  </button>
+                </div>
+              </li>
+
+              <li>
+                <span>Colour Name</span> :
+                <span class="selection">{{ selectedColor }}</span>
+              </li>
+
+              <li class="col-8">
+                <div class="btn-group">
+                  <button
+                    class="circle-button"
+                    type="button"
+                    *ngFor="let color of colors"
+                    [class.selectedColor]="color === selectedColor"
+                    (click)="onColorSelect(color)"
+                  >
+                    <img
+                      alt=""
+                      [src]="getImageUrl(color)"
+                      width="100%"
+                      class="circle-img"
+                    />
+                  </button>
+                </div>
+              </li>
+
+              <br />
+              <li><span>Availibility</span> : In Stock</li>
+            </ul>
+
+            <br />
+            <div class="row">
+              <h4 class="col-4">$ {{ selectedPrice.toFixed(2) }}</h4>
+              <button
+                class="cart button primary-btn col-3"
+                (click)="AddtoCart($event)"
+              >
+                Add to Cart
+              </button>
+            </div>
+
+            <span style="color: red">&nbsp; &nbsp; {{ alreadyadded }}</span>
+
+            <div class="card_area d-flex align-items-center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--================End Single Product Area =================-->
+
+  <!--================Product Description Area =================-->
+  <section class="product_description_area">
+    <div class="container">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="profile-tab"
+            data-toggle="tab"
+            href="#profile"
+            role="tab"
+            aria-controls="profile"
+            aria-selected="false"
+            >Specification</a
+          >
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade"
+          id="profile"
+          role="tabpanel"
+          aria-labelledby="profile-tab"
+        >
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>
+                    <h5>Brand</h5>
+                  </td>
+                  <td>
+                    <h5>{{ models.data[0].brand }}</h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5>Model</h5>
+                  </td>
+                  <td>
+                    <h5>{{ models.data[0].product }}</h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5>Color</h5>
+                  </td>
+                  <td>
+                    <h5>{{ selectedColor }}</h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5>Storage</h5>
+                  </td>
+                  <td>
+                    <h5>{{ selectedStorage }}</h5>
+                  </td>
+                </tr>
+                <!-- <tr>
+                <td>
+                  <h5>Display</h5>
+                </td>
+                <td>
+                  <h5>{{ models[0].DISPLAY }}</h5>
+                </td>
+              </tr> -->
+                <!-- <tr>
+                <td>
+                  <h5>Processor</h5>
+                </td>
+                <td>
+                  <h5>{{ models[0].PROCESSOR }}</h5>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h5>Camera</h5>
+                </td>
+                <td>
+                  <h5>{{ models[0].CAMERA }}</h5>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h5>Operating System</h5>
+                </td>
+                <td>
+                  <h5>{{ models[0].OS }}</h5>
+                </td>
+              </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================End Product Description Area =================-->
+</main>
+
+<!--================ Start footer Area  =================-->
+<app-footer></app-footer>
+<!--================ End footer Area  =================-->

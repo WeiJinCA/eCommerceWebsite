@@ -1,0 +1,48 @@
+<app-header></app-header>
+
+<main class="main">
+  <div class="container box">
+    <h2>Your Favorites</h2>
+    <div class="row">
+      <h5 *ngIf="products.data.length == 0" class="pt-5">
+        Your favourites list is empty!
+      </h5>
+      <table border="1" *ngIf="products.data.length > 0">
+        <tr>
+          <!-- <th class="col-2">Prodyct ID</th> -->
+          <th class="col-2">Product Img</th>
+          <th class="col-1">Brand</th>
+          <th class="col-1">Model</th>
+          <th class="col-5">Description</th>
+          <th class="col-2">Price</th>
+        </tr>
+
+        <tr *ngFor="let product of products.data">
+          <!-- Start another row -->
+          <!-- <td>{{ product.id }}</td> -->
+          <!-- Table data cell -->
+          <td>
+            <img
+              [src]="getImageUrl(product.product)"
+              alt=""
+              class="p-2"
+              width="60%"
+            />
+          </td>
+          <td>{{ product.brand }}</td>
+          <td>{{ product.product }}</td>
+          <td>
+            {{ product.storage }}
+            {{ product.color }}
+          </td>
+          <td>{{ product.price }}</td>
+          <!-- Table data cell -->
+        </tr>
+
+        <!-- You can add more rows and cells as needed -->
+      </table>
+    </div>
+  </div>
+</main>
+
+<app-footer></app-footer>

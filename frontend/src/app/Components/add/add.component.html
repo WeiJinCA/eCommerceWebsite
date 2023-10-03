@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.108.0" />
+    <title>Checkout example · Bootstrap v5.3</title>
+  </head>
+
+  <body class="bg-light">
+    <div class="container">
+      <main>
+        <div class="py-3 text-center">
+          <h2>Add Product</h2>
+        </div>
+
+        <div class="row g-2">
+          <!-- <div class="col-md-7 col-lg-8"> -->
+          <h4 class="mb-1">Add Your Product Here</h4>
+          <form
+            class="needs-validation"
+            novalidate
+            #regForm="ngForm"
+            (ngSubmit)="AddProduct(regForm)"
+          >
+            <div class="row g-1">
+              <div class="col-12">
+                <label for="brand" class="form-label">Brand</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="brand"
+                  name="brand"
+                  [(ngModel)]="model.brand"
+                  #brand="ngModel"
+                  placeholder=""
+                  value=""
+                  required
+                />
+                <div class="invalid-feedback">
+                  Valid brand name is required.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="product" class="form-label">Model Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="product"
+                  name="product"
+                  [(ngModel)]="model.product"
+                  #product="ngModel"
+                  placeholder=""
+                  value=""
+                  required
+                />
+                <div class="invalid-feedback">
+                  Valid model name is required.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="price" class="form-label">Price</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="price"
+                  name="price"
+                  [(ngModel)]="model.price"
+                  #price="ngModel"
+                  placeholder=""
+                  value=""
+                  required
+                />
+                <div class="invalid-feedback">Valid price is required.</div>
+              </div>
+
+              <div class="col-12">
+                <label for="color" class="form-label">Color</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="color"
+                  name="color"
+                  [(ngModel)]="model.color"
+                  #color="ngModel"
+                  placeholder=""
+                  value=""
+                  required
+                />
+                <div class="invalid-feedback">Valid color is required.</div>
+              </div>
+
+              <div class="col-12">
+                <label for="storage" class="form-label">Storage</label>
+              </div>
+              <div class="col-12">
+                <input
+                  type="radio"
+                  name="storage"
+                  value="64GB"
+                  [(ngModel)]="model.storage"
+                  #storage="ngModel"
+                  required
+                /><b> 64GB</b>
+                &nbsp;
+                <input
+                  type="radio"
+                  name="storage"
+                  value="128GB"
+                  [(ngModel)]="model.storage"
+                  #storage="ngModel"
+                  required
+                /><b> 128GB</b>
+                &nbsp;
+                <input
+                  type="radio"
+                  name="storage"
+                  value="256GB"
+                  [(ngModel)]="model.storage"
+                  #storage="ngModel"
+                  required
+                /><b> 256GB</b>
+                <div class="invalid-feedback">Valid storage is required.</div>
+              </div>
+
+              <div class="col-12">
+                <label for="RollNumber"><b>Photo Input</b></label>
+
+                <div class="form-group">
+                  <!-- (change)="handleFileInput(($event.target) as HTMLInputElement.files)" -->
+                  <input type="file" id="photo" name="photo" #fileInput />
+                </div>
+              </div>
+            </div>
+
+            {{ model | json }}
+
+            <!-- <hr class="my-4"> -->
+
+            <!-- <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="same-address">
+                            <label class="form-check-label" for="same-address">Shipping address is the same as my
+                                billing address</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="save-info">
+                            <label class="form-check-label" for="save-info">Save this information for next time</label>
+                        </div> -->
+
+            <!-- <h4 class="mb-3">Payment</h4> -->
+            <div class="text-right">
+              <button
+                [routerLink]="['/adminDash']"
+                class="btn btn-outline-info"
+                style="outline: none"
+              >
+                <i class="fas fa-chevron-left"></i> Back to Homepage</button
+              >&nbsp;
+              <button
+                type="submit"
+                class="btn btn-outline-primary"
+                [disabled]="!regForm.form.valid"
+                style="outline: none"
+              >
+                Add Product
+              </button>
+            </div>
+          </form>
+          <!-- </div> -->
+        </div>
+      </main>
+
+      <!-- <app-footer1></app-footer1> -->
+    </div>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="checkout.js"></script>
+  </body>
+</html>

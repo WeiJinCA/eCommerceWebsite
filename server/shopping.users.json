@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "64d0d19f1522b60d91f2b1b8"
+  },
+  "name": "Smith",
+  "email": "ca@gmail.com",
+  "phone": "4387781288",
+  "password": "1",
+  "favorites": [
+    56,
+    14
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d12326171fc8398f36e89c"
+  },
+  "name": "WEI JIN",
+  "email": "test@gmail.com",
+  "phone": "4387781234",
+  "password": "1",
+  "favorites": [
+    14,
+    8
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d15e41dded0d73407dea8c"
+  },
+  "name": "we",
+  "email": "test1@gmail.com",
+  "phone": "4384567891",
+  "password": "1",
+  "favorites": [
+    8
+  ],
+  "__v": 0
+}]
